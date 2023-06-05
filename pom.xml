@@ -5,10 +5,10 @@
 	<version>0.2-SNAPSHOT</version>
 	<scm>
 		<url>https://github.com/Shubhamk0503/maven-release</url>
-		<connection>scm:git:https://github.com/Shubhamk0503/maven-release.git</connection>
+		<connection>scm:git:https://shubhamk0503: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@github.com/Shubhamk0503/maven-release.git</connection>
       <tag>HEAD</tag>
   </scm>
-	
+
 	<!-- Repository Information -->
 	<distributionManagement>
 		<repository>
@@ -35,7 +35,6 @@
 								<configuration>
 									<tasks>
 										<echo>Using env.test.properties</echo>
-										<!-- Using predefined maven properties mentioned in https://github.com/arpitaggarwal/predefined_maven_properties -->
 										<copy file="src/main/resources/env.test.properties" tofile="${project.build.outputDirectory}/env.properties" />
 									</tasks>
 								</configuration>
@@ -83,7 +82,7 @@
 				    <tag>v${releaseVersion}</tag>
 					<tagNameFormat>v@{project.version}</tagNameFormat>
 					<autoVersionSubmodules>true</autoVersionSubmodules>
-					<!-- releaseProfiles configuration will actually force a Maven profile 
+					<!-- releaseProfiles configuration will actually force a Maven profile
 						– the `releases` profile – to become active during the Release process. -->
 					<releaseProfiles>releases</releaseProfiles>
 				</configuration>
